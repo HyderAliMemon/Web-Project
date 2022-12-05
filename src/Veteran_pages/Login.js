@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./styles/Login.styles.css"
-import {Home} from "./Home"
+// import {Home} from "./Home"
 import { useNavigate ,Route,Routes,Link} from "react-router-dom";
 
 export const Login = (props) => {
@@ -29,8 +29,8 @@ export const Login = (props) => {
         if(data.status === 'ok'){
             setLogin(true)
             alert('Login Successful')
-            localStorage.setItem("token",data.data)
-            localStorage.setItem("user",data.name)
+            localStorage.setItem("vet-token",data.data)
+            localStorage.setItem("vet-email",data.email)
             window.location='./vet-home'
         }
         else
@@ -41,20 +41,19 @@ export const Login = (props) => {
     return (
         // <div className="auth-form-container">
 
-        <>
+        
         <div className="flex">
 
             <img className="pic" alt="" src={ require ("../Images/proj.png")} height="300px"/>
             <form className="login-form" onSubmit={handleLogin}>
-                <label>Email</label><br/>
-                <input className="login-input" value={email}  required onChange={(e) => {setEmail(e.target.value)}}type="email" placeholder="i190501@nu.edu.pk" id="email" name="email" /><br/>
-                <label>Password</label> <br/>
-                <input className="login-input" value={pass} required onChange={(e) => {setPass(e.target.value)}} type="password" placeholder="******" id="password" name="password" /><br/>
-                <button className="form-btn" type="submit">Login</button>
+                <label className="login-label">Email</label><br/>
+                <input className="login-input" value={email}  required onChange={(e) => {setEmail(e.target.value)}}type="email" placeholder="Please Enter Email" id="email" name="email" /><br/>
+                <label className="login-label">Password</label> <br/>
+                <input className="login-input" value={pass} required onChange={(e) => {setPass(e.target.value)}} type="password" placeholder="Please Enter Password" id="password" name="password" /><br/>
+                <button className="login-btn" type="submit">Login</button>
             </form>
-            <button className="login-link-btn" onClick={() => {navigate("/register")}}>Don't have an account? Register here.</button>
+            <button className="login-link-btn" onClick={() => {navigate("/vet-register")}}>Don't have an account? Register here.</button>
              {/* {   login &&<Home/>} */}
         </div>
-        </>
     )
 }

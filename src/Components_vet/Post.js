@@ -1,17 +1,20 @@
 import { useNavigate } from "react-router-dom";
-import "./styles/Posts.styles.css"
+import {useState} from "react";
+import "./styles/post.styles.css"
 export const Post = () => {
 
-    const handleSubmit= (data) => {
-        console.log(data);
+    const [post, setPost] = useState('');
+
+    const handleSubmit= (event) => {
+        event.preventDefault();
+        console.log(post);
     };
     return (
 
     <div className={"post-container"} contenteditable>
     <form  onSubmit={handleSubmit}>
-        <textarea  contentEditable placeholder="Hi I am doing web project ..."  />
-        <button className="create-post-btn">  Post</button>
-        
+        <textarea   value={post}  onChange={(e) => {setPost(e.target.value)}} type="text" id="post" name="post" placeholder="Write Your Post..."  />
+        <button type="submit" className="create-post-btn">  Post</button>
         </form>
     </div>
     )

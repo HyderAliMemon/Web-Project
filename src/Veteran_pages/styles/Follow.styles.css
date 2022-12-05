@@ -1,0 +1,54 @@
+
+.follow-container{
+    margin-left: 38pc;
+
+}
+.unfollow-btn{
+    margin-right: 25px;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: bold;
+    border-radius: 50pc;
+    background-color: #65C14A;
+    margin-right: 30px;
+    margin-bottom:20px ;
+
+}
+
+.unfollow-btn:hover{
+    font-size: 14px;
+}
+
+.follow-btn{
+    margin-right: 25px;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: bold;
+    border-radius: 50pc;
+    background-color: #65C14A;
+    margin-right: 30px;
+    margin-bottom:20px ;
+}
+
+.follow-btn:hover{
+    font-size: 14px;
+}
+
+.vet-home-btn {
+
+    border: none;
+        background-color: #65C14A;
+        padding: 0px;
+        margin-left: 38pc;
+        margin-top: 10px;
+        width: 200px;
+        height: 40px;
+        border-radius: 50px;
+        cursor: pointer;
+        color: white;
+    
+}

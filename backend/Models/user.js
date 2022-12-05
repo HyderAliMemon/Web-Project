@@ -26,6 +26,19 @@ const userSchema=new moongose.Schema({
     },
     user_following:{
         type:Array,
+    },
+    hobbies:{
+        type:Array,
+        default:[]
+    },
+    stars:{
+        type:Number,
+        default:0
+    },
+    InterestedEvents:{
+        type:Array,
+        default:[]
+
     }
 });
 

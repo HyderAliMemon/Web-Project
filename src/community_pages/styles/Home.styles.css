@@ -1,0 +1,94 @@
+.create-event-btn {
+    display: block;
+    border: 2px solid green;
+    background-color: #65C14A;
+    margin: 10px auto;
+    padding: 10px;
+    width: 200px;
+    height: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    font-size:large;
+    margin-top: 40px;
+    margin-left:+450px;
+
+}
+
+.event-h1{
+    margin: 0;
+    color: white;
+    font-size: 50px;
+    background-color: #65C14A;
+
+    /* padding: 6px 0 2px 0; */
+    margin-bottom: 50px;
+    width: 100%;
+    box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.5);
+}
+
+html{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+.body{
+    /* backgrouWnd-color: rgb(10, 189, 238); */
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+
+.check-invite-btn {
+    display: block;
+    border: 2px solid green;
+    background-color: #65C14A;
+    margin: 10px auto;
+    padding: 10px;
+    width: 200px;
+    height: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    font-size:large;
+    margin-top: 40px;
+    margin-right:+450px;
+
+
+
+}
+.flex-events {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+/* .login-link-btn{
+    padding-left: 39pc;
+    width:300px
+} */
+
+.event-input{
+    /* border-radius: 0 50% 0 50%; */
+    border-radius: 50px;
+    width: 250px;
+}
+.pic{
+    margin-bottom:50px;
+}
+.event-label{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 15px;
+
+    
+}

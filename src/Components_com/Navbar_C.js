@@ -5,10 +5,18 @@ export const Navbar_C=()=>{
     // current user info, loading dstate any error 
     // const [user,loading,error ]= useAuthState(auth);
     // but for simplicty reasons we need user only now
-const [user,setUser]=useState(true)
+    const [user,setUser]=useState(true)
+
+    const handleCLogout = (event) => {
+        event.preventDefault()
+        localStorage.removeItem("com-token");
+        localStorage.removeItem("com-email");
+        window.location.reload();
+    }
+
     return(
         <div className="navbar">
-            <Link to="/com-home" className="title">Veterans</Link>
+            <Link to="/com-home" className="title">Community</Link>
             
                 {/* {!user ? (
                     <Link to="/"> LogOut </Link>
@@ -21,7 +29,7 @@ const [user,setUser]=useState(true)
             </ul> */}
                {/* <ul> */}
 
-            <input  className="search-bar" type="text" placeholder="Search" />
+            <input  className="com-search-bar" type="text" placeholder="Search" />
                 {/* <input type="text">Q</input> */}
                {/* </ul> */}
             
@@ -30,9 +38,11 @@ const [user,setUser]=useState(true)
             <ul>
                 <Link to="/com-home"> Home </Link>
             </ul>  
-
             <ul>
-                <Link to="/com-login"> Logout </Link>
+                <p>{localStorage.getItem("vet-email")}</p>
+            </ul>
+            <ul>
+                <button className="logoutButton" onClick={handleCLogout}>Logout </button>
             </ul>
 
             </div>

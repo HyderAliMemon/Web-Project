@@ -20,10 +20,12 @@
     align-items: center; 
 }
 
-h1 {
+.home-h1 {
     color: white;
     font-size: 50px;
     background-color: #30336b;
+    background-color: #65C14A;
+
     padding: 6px 0 2px 0;
     margin-bottom: 10px;
     width: 100%;
@@ -36,6 +38,8 @@ h1 {
     border-radius: 5%;
     border-color: transparent;
     background-color: #30336b;
+    background-color: #65C14A;
+
     color: #fff;
     font-size: 20px;
     border: none;
@@ -46,7 +50,7 @@ h1 {
 }
 
 .start-btn:hover {
-    background-color: #22a6b3;
+    background-color: #22b368;
 }
 
 .btn-div {

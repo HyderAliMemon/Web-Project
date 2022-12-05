@@ -1,68 +1,60 @@
   
-  body {
-    margin: 0;
-  }
-
-  .navbar {
+.navbar {
     background-color: #65C14A;
     color: white;
     display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-    /* gap: 2rem; */
-    padding: 0 1rem;
+    width: 100pc;
+    align-items:flex-start;
   
 }
   
   .title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align:center;
     align-items: center;
 }
   
-  .nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    text-align:center;
-  
-    gap: 2px;
-    /* justify-content: space-between; */
-    
-  }
-#search-bar{
+.vet-search-bar{
     width:400px;
-    background-color:red;
+    /* background-color:red; */
   }
 
 .navbar ul:hover {
     background-color: greenyellow;    
   }
-
+.Flex-nav-vet{
+    display: flex;
+    color: white;
+    margin-left: 10pc;
+  
+  }
   
 .Flex{
     display: flex;
     color: white;
     align-items:center;
-    gap: 2rem;
+    /* gap: 2rem; */
     padding: 0 1rem;
     margin-left: 50pc;
   
   }
 .logoutButton{
-  border: none;
-  border-radius: 0%;
-  height: 50px;
-  margin: auto;
-  align-items: center;
-  justify-content: center;
+  margin-right: 25px;
   color: black;
   font-size: 12px;
   text-transform: uppercase;
-  width:100px;
+  text-decoration: underline;
+  font-weight: bold;
+  border-radius: 50pc;
+  background-color: #65C14A;
+  margin-right: 30px;
+  margin-bottom:20px ;
 }
 .logoutButton:hover{
-  font-size: 14px;
+  font-size: 16px;
+}
+
+
+.navbar p{
+  margin-left: 20px;
 }

@@ -9,8 +9,8 @@ export const Navbar=()=>{
 
     const handleLogout = (event) =>{
         event.preventDefault();
-        localStorage.removeItem("token");
-        localStorage.removeItem("user");
+        localStorage.removeItem("vet-token");
+        localStorage.removeItem("vet-email");
         window.location.reload();
     }
 
@@ -18,26 +18,24 @@ export const Navbar=()=>{
         <div className="navbar">
             <Link to="/home" className="title">Veterans</Link>
             
-                {/* {!user ? (
-                    <Link to="/"> LogOut </Link>
-                )   :   (
-                    <Link to="/createpost"> CreatePost </Link>
-                )} */}
-                
-            {/* <ul>
-                <Link to="/create-post">Crea</Link>
-            </ul> */}
-               {/* <ul> */}
-
-            <input  className="search-bar" type="text" placeholder="Search" />
-                {/* <input type="text">Q</input> */}
-               {/* </ul> */}
+            <input  className="vet-search-bar" type="text" placeholder="Search" />
             
-            <div className="Flex">
-                <Link to="/"> Home </Link> 
-                <p>{localStorage.getItem("user").toUpperCase()}</p>
-                <button className="logoutButton" onClick={handleLogout}> Logout </button>
-            </div>
+            <div className="Flex-nav-vet">
+            <ul>
+                <Link to="/vet-home"> Home </Link> 
+            </ul>
+            <ul>
+                <Link to="/vet-invites"> Invites </Link> 
+            </ul>
+            <ul>
+                <Link to="/vet-follow"> Send Request </Link> 
+            </ul>
+                <p>{localStorage.getItem("vet-email")}</p>
+    
+            
+                <button className="logoutButton" onClick={handleLogout}>Logout </button>
+            
+                </div>
         </div>
     )
                 }
