@@ -1,0 +1,7 @@
+.Home_Page{
+    position: relative;
+    display: grid;
+    grid-template-columns: 20rem 40rem;
+    gap: 1rem;
+    background: #f3f3f3;
+}
