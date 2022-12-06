@@ -6,7 +6,7 @@ const eventSchema=new moongose.Schema({
         default:""
     },
     eventTime:{
-        type:String,
+        type:Date,
         default:""
     },
     eventStars:{

@@ -1,52 +1,81 @@
   
-  body {
-    margin: 0;
-  }
-
-  .navbar {
-    background-color: #65C14A;
-    color: white;
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: stretch;
-    /* gap: 2rem; */
-    padding: 0 1rem;
-  
+.navbar {
+  background-color: #65C14A;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
 }
-  
-  .title {
-    font-size: 2rem;
-    text-align:center
+
+.title {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-align:center;
+  align-items: center;
 }
-  
-  .nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    text-align:center;
-  
-    gap: 2px;
-    /* justify-content: space-between; */
-    
-  }
-.com-search-bar{
-    width:400px;
-    /* background-color:red; */
-  }
 
-.navbar ul:hover {
-    background-color: greenyellow;    
-  }
+.vet-search-bar{
+  width:400px;
+  height: 10px;
+  /* background-color:red; */
+}
+.title_search{
+  margin-left: 2rem;
+  align-items: center;
+}
 
-  
-.Flex{
-    display: flex;
-    color: white;
-    align-items:flex-start;
-    gap: 2rem;
-    padding: 0 1rem;
-    margin-left: 50pc;
-  
-  }
+/* .navbar ul:hover {
+  background-color: greenyellow;    
+} */
+.Flex-nav-vet{
+  margin-left: 16rem;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  gap: 1.5em;
+  align-items: center;
+}
+
+.logoutButton{
+color: black;
+text-transform: uppercase;
+text-decoration: underline;
+font-weight: bold;
+border-radius: 50px;
+background-color: #65C14A;
+color: white;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+text-decoration: none;
+border-spacing: 0;
+font-size: 15px;
+}
+.homebtn{
+color: white;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+text-transform: uppercase;
+font-weight: bold;
+text-decoration: none;
+}
+.invbtn{
+color: white;
+font-weight: bold;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+text-decoration: none;
+text-transform: uppercase;
+}
+.email{
+font-weight: bold;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.sendbtn{
+color: white;
+font-weight: bold;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+text-transform: uppercase;
+text-decoration: none;
+}
+.logoutButton:hover{
+font-size: 16px;
+}

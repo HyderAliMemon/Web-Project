@@ -9,14 +9,20 @@ export const WritePost = (props) => {
     // const [post, setPost] = useState('');
     const imageRef = useRef()
     const inputRef = useRef()
-    const [image,setImage] = useState({image:''});
+    const [image,setImage] = useState('');
     // const [imageStore,setImageStore] = useState('');
     const [text,setText] = useState('');
 
     const onImageLoad = (event) => {
         if(event.target.files && event.target.files[0]){
-            let img = event.target.files[0];
-            setImage({image:URL.createObjectURL(img)});
+            // let img = event.target.files[0];
+            
+            // setImage({image:URL.createObjectURL(img)});
+            var file_read = new FileReader();
+		    file_read.readAsDataURL(event.target.files[0]);
+		    file_read.onload = function (e) {
+                setImage(e.target.result)
+		    }     
         }
     };
 
@@ -30,12 +36,12 @@ export const WritePost = (props) => {
             body: JSON.stringify({
                 email:localStorage.getItem('vet-email'),
                 postDescription:text,
-                image:image.image,
+                image:image,
             })
         })
         const data = await response.json();
         if(data.status === 'ok'){
-            setImage({image:''})
+            setImage('')
             inputRef.current.value=''
             setText('')
             props.setPosts([])
@@ -52,10 +58,10 @@ export const WritePost = (props) => {
                 <input type="text" ref={inputRef} onChange={(e)=>{setText(e.target.value)}} placeholder="Write Your Post"/>
             </div>
         </div>
-        {image.image!=='' && (
+        {image!=='' && (
             <div className="ShowImage">
-                <button className="removeImage" onClick={()=>setImage(null)}>Remove</button>
-                <img src={image.image} alt=""/>
+                <button className="removeImage" onClick={()=>setImage('')}>Remove</button>
+                <img src={image} alt=""/>
             </div>
         )}
         <div className="Post_options">

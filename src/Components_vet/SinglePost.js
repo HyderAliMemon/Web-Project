@@ -3,6 +3,7 @@ import LikePic from '../Images/like.png'
 import UnlikePic from '../Images/unlike.png'
 import PostPic from '../Images/Cover.png'
 import { useEffect,useState } from 'react'
+import Moment from 'react-moment';
 export const SinglePost = ({data}) => {
 
     // const [post, setPost] = useState('');
@@ -47,6 +48,7 @@ export const SinglePost = ({data}) => {
     return (
 
     <div className="Posts">
+        <Moment fromNow>{new Date(data.postTime)}</Moment>
         <img src={data.image} className="postPic" alt=""></img>
         <div className="post_attributes">
             <img className='reactionPost' src={like?LikePic:UnlikePic} alt="" onClick={handleLike}></img>

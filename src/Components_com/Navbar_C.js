@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import { Link} from "react-router-dom"
 import "./styles/navbar.styles.css"
 export const Navbar_C=()=>{
@@ -7,8 +7,8 @@ export const Navbar_C=()=>{
     // but for simplicty reasons we need user only now
     const [user,setUser]=useState(true)
 
-    const handleCLogout = (event) => {
-        event.preventDefault()
+    const handleLogout = (event) =>{
+        event.preventDefault();
         localStorage.removeItem("com-token");
         localStorage.removeItem("com-email");
         window.location.reload();
@@ -16,36 +16,15 @@ export const Navbar_C=()=>{
 
     return(
         <div className="navbar">
-            <Link to="/com-home" className="title">Community</Link>
-            
-                {/* {!user ? (
-                    <Link to="/"> LogOut </Link>
-                )   :   (
-                    <Link to="/createpost"> CreatePost </Link>
-                )} */}
-                
-            {/* <ul>
-                <Link to="/create-post">Crea</Link>
-            </ul> */}
-               {/* <ul> */}
-
-            <input  className="com-search-bar" type="text" placeholder="Search" />
-                {/* <input type="text">Q</input> */}
-               {/* </ul> */}
-            
-            <div className="Flex">
-
-            <ul>
-                <Link to="/com-home"> Home </Link>
-            </ul>  
-            <ul>
-                <p>{localStorage.getItem("vet-email")}</p>
-            </ul>
-            <ul>
-                <button className="logoutButton" onClick={handleCLogout}>Logout </button>
-            </ul>
-
+            <div className="title_search">
+                <Link to="/com-home" className="title">Community</Link>
+                <input  className="vet-search-bar" type="text" placeholder="Search" />
+            </div>
+            <div className="Flex-nav-vet">
+                <Link to="/com-home" className="homebtn"> Home </Link>     
+                <p className="email">{localStorage.getItem("com-email")}</p>
+                <button className="logoutButton" onClick={handleLogout}>Logout </button>         
             </div>
         </div>
     )
-                }
+}

@@ -16,26 +16,17 @@ export const Navbar=()=>{
 
     return(
         <div className="navbar">
-            <Link to="/home" className="title">Veterans</Link>
-            
-            <input  className="vet-search-bar" type="text" placeholder="Search" />
-            
+            <div className="title_search">
+                <Link to="/vet-home" className="title">Veterans</Link>
+                <input  className="vet-search-bar" type="text" placeholder="Search" />
+            </div>
             <div className="Flex-nav-vet">
-            <ul>
-                <Link to="/vet-home"> Home </Link> 
-            </ul>
-            <ul>
-                <Link to="/vet-invites"> Invites </Link> 
-            </ul>
-            <ul>
-                <Link to="/vet-follow"> Send Request </Link> 
-            </ul>
-                <p>{localStorage.getItem("vet-email")}</p>
-    
-            
-                <button className="logoutButton" onClick={handleLogout}>Logout </button>
-            
-                </div>
+                <Link to="/vet-home" className="homebtn"> Home </Link> 
+                <Link to="/vet-invites" className="invbtn"> Invites </Link> 
+                <Link to="/vet-follow" className="sendbtn"> Send Request </Link>    
+                <p className="email">{localStorage.getItem("vet-email")}</p>
+                <button className="logoutButton" onClick={handleLogout}>Logout </button>         
+            </div>
         </div>
     )
-                }
+}

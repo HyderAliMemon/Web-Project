@@ -4,6 +4,12 @@ export const Posts = (props) => {
 
     // const [posts, setPosts] = useState([0]);
 
+    const sortFunction = (a,b) => {  
+        var dateA = new Date(a.date).getTime();
+        var dateB = new Date(b.date).getTime();
+        return dateA > dateB ? 1 : -1;  
+       };
+
     const getPosts = async () => {
         const response = await fetch('http://localhost:4000/posts/'+localStorage.getItem('vet-email')+'/allposts',{
             method:'GET',
@@ -13,6 +19,7 @@ export const Posts = (props) => {
         })
         const data = await response.json();
         localStorage.setItem('post-temp',0)
+        data.sort(sortFunction)
         props.setPosts(data)
     }
 
