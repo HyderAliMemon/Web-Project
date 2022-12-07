@@ -18,7 +18,6 @@ export const Posts = (props) => {
             },
         })
         const data = await response.json();
-        localStorage.setItem('post-temp',0)
         data.sort(sortFunction)
         props.setPosts(data)
     }

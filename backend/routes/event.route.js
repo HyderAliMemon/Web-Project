@@ -26,8 +26,9 @@ router.get("/:id",async(req,res)=>{
     const data=await Event.find({_id:req.params.id})
     res.json({status:"ok",data})
 })
-router.get("/:id/getCommunityevent",async(req,res)=>{
-    const data=await Event.find({community_id:req.params.id})
+router.get("/:email/getCommunityevent",async(req,res)=>{
+    const comm = await community.findOne({email:req.params.email})
+    const data=await Event.find({community_id:comm._id})
     res.json({status:"ok",data})
 })
 

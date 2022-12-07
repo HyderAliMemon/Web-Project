@@ -1,5 +1,5 @@
   
-.navbar {
+.c_navbar {
   background-color: #65C14A;
   color: white;
   display: flex;
@@ -7,30 +7,32 @@
   align-items:center;
 }
 
-.title {
+.c_title {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: white;
   text-decoration: none;
   font-size: 1.5rem;
   text-align:center;
   align-items: center;
+  background-color: #65C14A;
 }
 
-.vet-search-bar{
+.c_vet-search-bar{
   width:400px;
   height: 10px;
   /* background-color:red; */
 }
-.title_search{
+.c_title_search{
   margin-left: 2rem;
   align-items: center;
+  display: flex;
 }
 
 /* .navbar ul:hover {
   background-color: greenyellow;    
 } */
-.Flex-nav-vet{
-  margin-left: 16rem;
+.c_Flex-nav-vet{
+  margin-left: 20rem;
   display: flex;
   flex-direction: row;
   color: white;
@@ -38,44 +40,48 @@
   align-items: center;
 }
 
-.logoutButton{
-color: black;
-text-transform: uppercase;
-text-decoration: underline;
-font-weight: bold;
-border-radius: 50px;
-background-color: #65C14A;
+.c_logoutButton{
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: bold;
+  border-radius: 50px;
+  color:  white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  border-spacing: 0;
+  font-size: 15px;
+  /* background-color: white; */
+  border: solid white;
+  background-color: #65C14A;
+}
+.c_homebtn{
 color: white;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
+text-transform: uppercase;
+font-weight: bold;
 text-decoration: none;
-border-spacing: 0;
+background-color: #65C14A;
 font-size: 15px;
 }
-.homebtn{
-color: white;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-text-transform: uppercase;
-font-weight: bold;
-text-decoration: none;
-}
-.invbtn{
+.c_invbtn{
 color: white;
 font-weight: bold;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 text-decoration: none;
 text-transform: uppercase;
 }
-.email{
+.c_email{
 font-weight: bold;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.sendbtn{
+.c_sendbtn{
 color: white;
 font-weight: bold;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 text-transform: uppercase;
 text-decoration: none;
 }
-.logoutButton:hover{
-font-size: 16px;
+.c_logoutButton:hover{
+  background-color: white;
+  color: #65C14A ;
 }

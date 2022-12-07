@@ -4,7 +4,7 @@ const Veteran=require('../Models/User')
 const Event=require('../Models/Event')
 
 router.post('/sendInvite',async(req,res)=>{
-    const invitation=await new Invitation(req.body)
+    const invitation = new Invitation(req.body)
     const result=await invitation.save()
     res.json(result)
 
@@ -26,6 +26,14 @@ router.post('/:email/acceptInvite',async(req,res)=>{
         res.json("Unable to Accept Invitation")
     }
 });
+router.post('/isInvited',async(req,res)=>{
+    const invitation = await Invitation.findOne({EventID:req.body.EventID,VeteranEmail:req.body.VeteranEmail})
+    if (!invitation)
+        res.json({isInvited:false})
+    else
+        res.json({isInvited:true})
+});
+
 // router.post('/:email/rejectInvite'),async(req,res)=>{
 //     await Invitation.deleteOne({EventID:event.EventID})
 

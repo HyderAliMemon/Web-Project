@@ -38,6 +38,27 @@ router.get("/:id",async(req,res)=>{
         res.status(500).json('Error');
     }
 });
+
+router.get("/:type/getHobbyUsers",async(req,res)=>{
+    try{
+        const users=await User.find({hobbies:req.params.type});
+        res.json({status:'ok',users})
+    }
+    catch(err){
+        res.json({status:'Error'});
+    }
+});
+
+router.get("/:email/getUser",async(req,res)=>{
+    try{
+        const user=await User.findOne({email:req.params.email});
+        res.json({status:'ok',user})
+    }
+    catch(err){
+        res.json({status:'Error'});
+    }
+});
+
 router.post("/:email/followuser",async(req,res)=>{
     if(req.body.email!==req.params.email){
         try{

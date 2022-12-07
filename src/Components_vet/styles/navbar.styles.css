@@ -4,7 +4,9 @@
   color: white;
   display: flex;
   flex-direction: row;
+  gap: 2rem;
   align-items:center;
+
 }
 
 .title {
@@ -24,32 +26,35 @@
 .title_search{
   margin-left: 2rem;
   align-items: center;
+  display: flex;
 }
 
 /* .navbar ul:hover {
   background-color: greenyellow;    
 } */
 .Flex-nav-vet{
-  margin-left: 16rem;
-  display: flex;
+  margin-left: 5rem;
+   display: flex;
   flex-direction: row;
   color: white;
   gap: 1.5em;
   align-items: center;
+  justify-content: space-between  ;
 }
 
 .logoutButton{
-color: black;
 text-transform: uppercase;
 text-decoration: underline;
 font-weight: bold;
 border-radius: 50px;
-background-color: #65C14A;
-color: white;
+color:  white;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 text-decoration: none;
 border-spacing: 0;
 font-size: 15px;
+/* background-color: white; */
+border: solid white;
+background-color: #65C14A;
 }
 .homebtn{
 color: white;
@@ -77,5 +82,6 @@ text-transform: uppercase;
 text-decoration: none;
 }
 .logoutButton:hover{
-font-size: 16px;
+  background-color: white;
+  color: #65C14A ;
 }
