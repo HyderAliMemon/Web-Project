@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Ubuntu','sans-serif';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* html{
+  background-color: #f3f3f3;
+} */
