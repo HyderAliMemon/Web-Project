@@ -37,9 +37,11 @@ router.get('/:email/getInvitations',async(req,res)=>{
     const veteran=await Veteran.findOne({email:req.params.email})
     const invitations=await Invitation.find({VeteranEmail:veteran.email})
     res.json(invitations)
-})
-// router.post('/:email/rejectInvite'),async(req,res)=>{
-//     await Invitation.deleteOne({EventID:event.EventID})
+});
+router.post('/:eventid/rejectInvite',async(req,res)=>{
+    console.log(req.body.eventID)
+    await Invitation.deleteOne({EventID:req.params.eventid})
+    res.json({message:"done"})
 
-// }
+})
 module.exports=router

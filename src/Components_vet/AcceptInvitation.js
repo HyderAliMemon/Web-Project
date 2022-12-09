@@ -36,6 +36,21 @@ export const AcceptInvitation = (props) => {
             props.setInvitations([])
         }
     };
+    const RejectRequest = async (event) => {
+        event.preventDefault();
+        console.log("here")
+        const response = await fetch('http://localhost:4000/invitation/'+props.eventID+'/rejectInvite',{
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json',
+            },
+        })
+        console.log("jello")
+        const data=await response.json();
+        if (data.message="done"){
+            props.setInvitations([])
+        }
+    };
 
     useEffect(() => {
         getEventDetails();
@@ -77,7 +92,7 @@ export const AcceptInvitation = (props) => {
                 <hr></hr>
                 <div className="ButtonsOption">
                     <button className="AcceptBtn" onClick={AcceptRequest}>Accept</button>
-                    <button className="RejectBtn">Reject</button>
+                    <button className="RejectBtn" onClick={RejectRequest}>Reject</button>
                 </div>
             </div>
         </div>
