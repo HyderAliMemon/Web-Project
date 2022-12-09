@@ -1,0 +1,15 @@
+.main {
+    background-color: green;
+
+}
+.search-post-btn{
+    background-color: #65C14A;
+    margin-top: 10px;
+    padding: 10px;
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    font-size:large
+}

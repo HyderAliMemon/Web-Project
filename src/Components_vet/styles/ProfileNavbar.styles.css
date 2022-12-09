@@ -1,0 +1,26 @@
+.btn {
+    border: none;
+    background-color: #65C14A;
+    padding: 0px;
+    width: 200px;
+    height: 40px;
+    margin-left: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+
+}
+.card-pnav{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: rgba(255,255,255,0.64);
+    border-radius: 1rem;
+    gap:0rem;
+    width:300px;
+    border-radius: 50px;
+
+}
+  
+
