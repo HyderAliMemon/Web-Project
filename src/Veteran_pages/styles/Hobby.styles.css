@@ -20,7 +20,8 @@
     width: 50px;
     height: 40px;
     border-radius: 50px;
-    font-size:large
+    font-size:large;
+    color:red;
 }
 
 .hobby-post-btn{

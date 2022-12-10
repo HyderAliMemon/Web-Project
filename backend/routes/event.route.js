@@ -30,7 +30,9 @@ router.get("/:email/getCommunityevent",async(req,res)=>{
     const comm = await community.findOne({email:req.params.email})
     const data=await Event.find({community_id:comm._id})
     res.json({status:"ok",data})
-})
-
-
+});
+router.get("/:location/getLocationBasedEvents",async(req,res)=>{
+    const events=await Event.find({eventlocation:req.params.location})
+    res.json(events)
+});
 module.exports=router

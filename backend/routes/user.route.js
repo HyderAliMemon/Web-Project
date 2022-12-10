@@ -107,4 +107,12 @@ router.post("/:email/unfollowuser",async(req,res)=>{
         res.json({status:"error",message:"You cannot unfollow yourself"})
     }   
 });
+router.post("/:email/addHobbies",async(req,res)=>{
+    const data=await User.findOne({email:req.params.email})
+    req.body.hobbies.map(async (hobby)=>{
+       await data.updateOne({$push:{hobbies:hobby.hobby}})  
+    })
+    res.json("Hobbies added")
+});
+
 module.exports=router

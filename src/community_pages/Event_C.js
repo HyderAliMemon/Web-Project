@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles/Event.styles.css"
 import {Home_C} from "./Home_C"
-import { useNavigate ,Route,Routes,Link} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const Event_C = (props) => {
     const [name, setName] = useState('');
