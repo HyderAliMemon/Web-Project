@@ -1,18 +1,20 @@
 import { useNavigate } from "react-router-dom";
 import {useState,useEffect} from "react";
-import "./styles/AcceptInvitation.styles.css"
+import "./styles/InterestedEvents.styles.css"
 import Cover from '../Images/place_cov.svg'
 import ProfileImg from '../Images/place_prof.jpg'
 import React from "react";
-export const AcceptInvitation = (props) => {
+export const InterestedEvents = (props) => {
 
     const [eventDetails,seteventDetails] = useState('');
-    const [communityName,setCommunityName]=useState('');
+    const [isInterested,setIsInterested]=useState(false);
 
     // const doNothing = (event) => {
     //     event.preventDefault();
     // }
-    
+    const doNothing = (event) => {
+        event.preventDefault();
+    }
     const getEventDetails = async () => {
         const response = await fetch('http://localhost:4000/event/'+props.eventID+'/getEventDetail',{
             method:'GET',
@@ -21,54 +23,29 @@ export const AcceptInvitation = (props) => {
             },
         })
         const data = await response.json();
+        // data.sort(sortFunctcion)
         seteventDetails(data)
     }
-    const getCommunityName = async () => {
-        const response = await fetch('http://localhost:4000/event/'+props.eventID+'/getCommunityDetails',{
-            method:'GET',
-            headers:{
-                'Content-Type':'application/json',
-            },
-        })
-        const data = await response.json();
-        console.log(data)
-        // data.sort(sortFunctcion)
-        setCommunityName(data)
-    }
 
-
-    const AcceptRequest = async (event) => {
+    const MarkEventasInterested = async (event) => {
         event.preventDefault();
-        const response = await fetch('http://localhost:4000/invitation/'+localStorage.getItem('vet-email')+'/acceptInvite',{
+        const response = await fetch('http://localhost:4000/invitation/'+localStorage.getItem('vet-email')+'/markEventasInterested',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json',
             },
+            body:JSON.stringify({
+                EventID:props.eventID
+            })
         })
         const data=await response.json();
         if (data.message="done"){
-            props.setInvitations([])
-        }
-    };
-    const RejectRequest = async (event) => {
-        event.preventDefault();
-        console.log("here")
-        const response = await fetch('http://localhost:4000/invitation/'+props.eventID+'/rejectInvite',{
-            method:'POST',
-            headers:{
-                'Content-Type':'application/json',
-            },
-        })
-        console.log("jello")
-        const data=await response.json();
-        if (data.message="done"){
-            props.setInvitations([])
+            setIsInterested(true);
         }
     };
 
     useEffect(() => {
         getEventDetails();
-        getCommunityName();
     }, []);
     return (
 
@@ -78,7 +55,7 @@ export const AcceptInvitation = (props) => {
             <img src={ProfileImg} alt=""></img>
         </div>
         <div className="ai_profile_Name">
-            <span>{communityName}</span>
+            <span>{"Hyder"}</span>
         </div>
         <div className="event_Details">
             <hr/>
@@ -105,9 +82,9 @@ export const AcceptInvitation = (props) => {
                     <span>{eventDetails!==''?eventDetails.data.eventlocation:''}</span>
                 </div>
                 <hr></hr>
-                <div className="ButtonsOption">
-                    <button className="AcceptBtn" onClick={AcceptRequest}>Accept</button>
-                    <button className="RejectBtn" onClick={RejectRequest}>Reject</button>
+                <div className="InterestedButton">
+                <span className={isInterested?"markedBtn":"Interestedbtn"} onClick={isInterested?doNothing:MarkEventasInterested}>{isInterested?'GoingToEvent':'Interested'}</span>
+                    {/* <button className="IntButton" onClick={MarkEventasInterested}>Interested</button> */}
                 </div>
             </div>
         </div>

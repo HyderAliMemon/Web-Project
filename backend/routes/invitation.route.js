@@ -43,5 +43,21 @@ router.post('/:eventid/rejectInvite',async(req,res)=>{
     await Invitation.deleteOne({EventID:req.params.eventid})
     res.json({message:"done"})
 
-})
+});
+router.post("/:email/markEventasInterested",async(req,res)=>{
+    const veteran=await Veteran.findOne({email:req.params.email})
+    const detailsOfEvent=await Event.findOne({_id:req.body.EventID})
+    try{
+        await veteran.updateOne({$push:{InterestedEvents:req.body.EventID}})
+        let stars=veteran.stars
+        let eventStars=detailsOfEvent.eventStars
+        let totalStars=stars+eventStars
+        await veteran.updateOne({stars:totalStars})
+        res.json({message:"done"})
+    }
+    catch(err){
+        res.json(err)
+    }        
+    
+});
 module.exports=router

@@ -11,7 +11,7 @@ router.get('/',async(req,res)=>{
 router.post("/addCommunity",async(req,res)=>{
     const hashed =  await bcrypt.hash(req.body.pass,10)
     const obj=new Community({
-      name:req.body.name,
+      commname:req.body.name,
       password:hashed,
       email:req.body.email
     })

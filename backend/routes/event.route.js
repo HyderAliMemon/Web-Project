@@ -31,8 +31,14 @@ router.get("/:email/getCommunityevent",async(req,res)=>{
     const data=await Event.find({community_id:comm._id})
     res.json({status:"ok",data})
 });
-router.get("/:location/getLocationBasedEvents",async(req,res)=>{
+router.get("/:location/:type/getLocationBasedEvents",async(req,res)=>{
     const events=await Event.find({eventlocation:req.params.location})
-    res.json(events)
+    const final=events.filter((event) => event.eventType == req.params.type)
+    res.json(final)
+});
+router.get("/:id/getCommunityDetails",async(req,res)=>{
+    const event=await Event.findOne({_id:req.params.id})
+    const communityName=await community.findOne({_id:event.community_id})
+    res.json(communityName.commname)
 });
 module.exports=router
