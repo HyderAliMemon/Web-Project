@@ -1,0 +1,56 @@
+.searchBar {
+  background-color: #f3f3f3;
+  height: 100pc;
+}
+.Bar{
+    background-color: #65C14A;
+    height: 4.5rem;
+}
+.Search_profile_div{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    /* height: 100vh; */
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f3f3f3;
+  }
+.search-post-btn{
+    background-color: #65C14A;
+    margin-top: 15px;
+    padding: 5px;
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    font-size:large;
+    border: 3px solid white;
+}
+
+.search-label{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+
+}
+
+.type-label{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 100px;
+    color: white;
+}
+
+.loc-search-bar{
+    width:400px;
+    height: 10px;
+   
+}
+
+.type-search-bar{
+    width:400px;
+    height: 10px;
+}

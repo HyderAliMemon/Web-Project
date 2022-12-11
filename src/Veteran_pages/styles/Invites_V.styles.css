@@ -1,0 +1,12 @@
+.InvitesV_profile_div{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    /* height: 100vh; */
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100pc;
+    width: 100pc;
+    background-color: #f3f3f3;
+  }

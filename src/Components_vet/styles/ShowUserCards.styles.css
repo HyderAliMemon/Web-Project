@@ -1,0 +1,119 @@
+.su_profileCard_div{
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1rem;
+    overflow-x: clip;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20rem;
+    background: rgba(255,255,255,0.64);
+}
+.su_profile_Images{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.su_profile_Images>img:nth-of-type(1){
+    width: 100%;
+}
+.su_profile_Images>img:nth-of-type(2){
+    width: 6rem;
+    position: absolute;
+    border-radius: 50%;
+    bottom: -3rem;
+    box-shadow: 0px 4px 17px 2px rgba(0,0,0,0.25);
+}
+.su_profile_Name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 10px;
+}
+.su_profile_Name>span:nth-of-type(1){
+    font-weight: bold;
+}
+
+.su_profile_Follow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.su_profile_Follow>hr{
+    width: 85%;
+    border: 1px solid #cfcdcd;
+}
+.su_profile_Follow>div{
+    display: flex;
+    gap: 1rem;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+}
+.su_Followers{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: center;
+    justify-content: center;
+}
+.su_Followers>span:nth-of-type(1){
+    font-weight: bold;
+}
+.su_Followers>span:nth-of-type(2){
+    color: gray;
+}
+.su_Following{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: center;
+    justify-content: center;
+}
+.su_Following>span:nth-of-type(1){
+    font-weight: bold;
+}
+.su_Following>span:nth-of-type(2){
+    color: gray;
+}
+.su_Line{
+    height: 150%;
+    border-left: 2px solid #cfcdcd;
+}
+.su_Profile_last{
+    position: relative;
+    font-weight: bold;
+    align-self: center;
+    justify-content: center;
+    top: -0.75rem;
+    color: black;
+}
+.sage{
+    color: #7209b7;
+}
+.plat{
+    color: #61f4de;
+}
+.sapp{
+    color: #0F52BA;
+}
+.dmnd{
+    color: #f66fb2;
+}
+.gold{
+    color: #FFD700;
+}
+.ruby{
+    color: #E0115F;
+}
+.silv{
+    color: #536976;
+}

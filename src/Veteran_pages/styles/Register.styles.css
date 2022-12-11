@@ -1,0 +1,64 @@
+html{
+    background-color: white;
+    height:100pc;
+    margin: 0;
+    padding: 0;
+}
+.body{
+    /* backgrouWnd-color: rgb(10, 189, 238); */
+    height:100pc;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.flex {
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+
+
+.reg-btn {
+    border: none;
+    background-color: #65C14A;
+    margin-left: 50px;
+    padding: 0px;
+    width: 200px;
+    height: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+}
+.Photo-reg-btns{
+    display: flex;
+    flex-direction: column;
+    gap:0.8rem;
+}
+
+.link-btn{
+    padding-left: 0pc;
+    /* width:300px */
+}
+
+.reg-input{
+    /* border-radius: 0 50% 0 50%; */
+    border-radius: 50px;
+    width: 250px;
+
+}
+.pic{
+    margin-bottom:50px;
+}
+.reg-label{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 15px;
+
+    
+}

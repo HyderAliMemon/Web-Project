@@ -1,0 +1,37 @@
+.hobby-add-btn{
+    border: 2px solid green;
+    background-color: #65C14A;
+    margin: 2px;
+    margin-left: 10px;
+    padding: 10px;
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    font-size:large
+}
+
+.hobby-rmv-btn{
+
+    margin: 2px;
+    margin-left: 10px;
+    padding: 10px;
+    width: 50px;
+    height: 40px;
+    border-radius: 50px;
+    font-size:large;
+    color:red;
+}
+
+.hobby-post-btn{
+    background-color: #65C14A;
+    margin-top: 10px;
+    padding: 10px;
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    font-size:large
+}

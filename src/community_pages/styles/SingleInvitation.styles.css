@@ -1,0 +1,105 @@
+.i_profileCard_div{
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1rem;
+    overflow-x: clip;
+    background: rgba(255,255,255,0.64);
+}
+.i_profile_Images{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.i_profile_Images>img:nth-of-type(1){
+    width: 100%;
+}
+.i_profile_Images>img:nth-of-type(2){
+    width: 6rem;
+    position: absolute;
+    border-radius: 50%;
+    bottom: -3rem;
+    box-shadow: 0px 4px 17px 2px rgba(0,0,0,0.25);
+}
+.i_profile_Name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 10px;
+}
+.i_profile_Name>span:nth-of-type(1){
+    font-weight: bold;
+}
+
+.i_profile_Follow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.i_profile_Follow>hr{
+    width: 85%;
+    border: 1px solid #cfcdcd;
+}
+.i_profile_Follow>div{
+    display: flex;
+    gap: 1rem;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+}
+.i_Followers{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: center;
+    justify-content: center;
+}
+.i_Followers>span:nth-of-type(1){
+    font-weight: bold;
+}
+.i_Followers>span:nth-of-type(2){
+    color: gray;
+}
+.i_Following{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: center;
+    justify-content: center;
+}
+.i_Following>span:nth-of-type(1){
+    font-weight: bold;
+}
+.i_Following>span:nth-of-type(2){
+    color: gray;
+}
+.i_Line{
+    height: 150%;
+    border-left: 2px solid #cfcdcd;
+}
+.i_Profile_last{
+    position: relative;
+    font-weight: bold;
+    align-self: center;
+    justify-content: center;
+    top: -0.75rem;
+    color: #65C14A;
+    cursor: pointer;
+}
+
+.i_Profile_last_invited{
+    position: relative;
+    font-weight: bold;
+    align-self: center;
+    justify-content: center;
+    top: -0.75rem;
+    color: gray;
+}
