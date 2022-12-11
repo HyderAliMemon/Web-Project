@@ -114,5 +114,13 @@ router.post("/:email/addHobbies",async(req,res)=>{
     })
     res.json("Hobbies added")
 });
+router.get("/:email/getFollowers",async(req,res)=>{
+const data=await User.findOne({email:req.params.email})
+res.json(data.user_followers)
+});
 
+router.get("/:email/getFollowing",async(req,res)=>{
+    const data=await User.findOne({email:req.params.email})
+    res.json(data.user_following)
+    });
 module.exports=router
