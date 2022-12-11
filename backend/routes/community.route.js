@@ -7,14 +7,17 @@ router.get('/',async(req,res)=>{
     res.json(data)
 });
 
-
+router.get("/:email/getCommunity",async(req,res)=>{
+  const community=await Community.findOne({email:req.params.email})
+  res.json(community)
+})
 router.post("/addCommunity",async(req,res)=>{
     const hashed =  await bcrypt.hash(req.body.pass,10)
     const obj=new Community({
       commname:req.body.name,
       password:hashed,
       email:req.body.email,
-      community_type:ctype
+      community_type:req.body.ctype
     })
     try{
       await obj.save()

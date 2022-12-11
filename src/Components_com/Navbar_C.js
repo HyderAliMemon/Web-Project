@@ -7,7 +7,21 @@ export const Navbar_C=()=>{
     // current user info, loading dstate any error 
     // const [user,loading,error ]= useAuthState(auth);
     // but for simplicty reasons we need user only now
-    const [user,setUser]=useState(true)
+    const [user,setUser]=useState('')
+    const getUser = async () => {
+        const response = await fetch('http://localhost:4000/community/'+localStorage.getItem('com-email')+'/getCommunity',{
+            method:'GET',
+            headers:{
+                'Content-Type':'application/json',
+            },
+        })
+        const data = await response.json();
+        console.log(data)
+        setUser(data.commname)
+    }
+    useEffect(() => {
+        getUser();
+    }, []);
 
     const handleLogout = (event) =>{
         event.preventDefault();
@@ -30,7 +44,7 @@ export const Navbar_C=()=>{
             <div className="c_Flex-nav-vet">
                 <button onClick={reloadPage} className="c_homebtn"> Home </button>   
                 <Link className="c_homebtn"  to="/add-event"> Add Event</Link>  
-                <p className="c_email">{localStorage.getItem("com-email")}</p>
+                <p className="c_email">{user}</p>
                 <button className="c_logoutButton" onClick={handleLogout}>Logout </button>         
             </div>
         </div>

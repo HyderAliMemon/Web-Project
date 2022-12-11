@@ -73,6 +73,14 @@ text-transform: uppercase;
 .email{
 font-weight: bold;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
+text-transform: uppercase;
+border: 2px solid white;
+background-color: white;
+color: #65C14A;
+border-radius: 50px;
+
+text-align: center;
+padding: 1px 15px 1px 15px;
 }
 .sendbtn{
 color: white;
