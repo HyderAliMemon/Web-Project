@@ -13,7 +13,8 @@ router.post("/addCommunity",async(req,res)=>{
     const obj=new Community({
       commname:req.body.name,
       password:hashed,
-      email:req.body.email
+      email:req.body.email,
+      community_type:ctype
     })
     try{
       await obj.save()

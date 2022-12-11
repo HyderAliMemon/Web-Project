@@ -6,7 +6,7 @@ export const SingleEvent = (props) => {
 
     const handleInvite = async (event) => {
         event.preventDefault();
-        const response = await fetch('http://localhost:4000/users/'+props.data.eventType+'/getHobbyUsers',{
+        const response = await fetch('http://localhost:4000/users/'+props.data.eventType+'/'+props.data._id+'/getHobbyUsers',{
             method:'GET',
             headers:{
                 'Content-Type':'application/json',

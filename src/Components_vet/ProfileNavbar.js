@@ -19,9 +19,9 @@ export const ProfileNavbar = () => {
                 <br/>
                 <button className="btn" type="submit" onClick={() => {navigate("/vet-upcoming-events")}} >Upcoming Events</button><br/>
                 <br/>
-                <button className="btn" type="submit">Login</button><br/>
+                <button className="btn" type="submit" onClick={() => {navigate("/vet-see-followers")}}>Followers</button><br/>
                 <br/>
-                <button className="btn" type="submit">Login</button><br/>
+                <button className="btn" type="submit" onClick={() => {navigate("/vet-see-following")}}>Following</button><br/>
 
 
     </div>

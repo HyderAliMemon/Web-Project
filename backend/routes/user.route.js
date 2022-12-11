@@ -47,9 +47,9 @@ router.get("/:id/getUsername",async(req,res)=>{
         res.status(500).json('Error');
     }
 });
-router.get("/:type/getHobbyUsers",async(req,res)=>{
+router.get("/:type/:eventID/getHobbyUsers",async(req,res)=>{
     try{
-        const users=await User.find({hobbies:req.params.type});
+        const users=await User.find({hobbies:req.params.type,InterestedEvents:{'$nin':[req.params.eventID]}});
         res.json({status:'ok',users})
     }
     catch(err){
